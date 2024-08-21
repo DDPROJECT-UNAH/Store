@@ -3,22 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Tienda de Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Tienda de Productos</h1>
-        <div class="input-group">
-            <input type="search" id="busqueda" class="form-control" placeholder="Buscar productos...">
-            <button class="btn btn-primary" onclick="buscarProducto()">Buscar</button>
+    <header class="bg-dark text-light py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h1 class="h3">Tienda de Productos</h1>
+            <button class="btn btn-success" onclick="window.location.href='auth.html'">Iniciar Sesión</button>
         </div>
-        <button class="btn btn-success" onclick="window.location.href='auth.html'">Iniciar Sesión</button>
     </header>
-    <main class="container my-4" id="productos">
-        <!-- Aquí se cargan las tarjetas de productos -->
+    <main class="container my-4 intro-container">
+        <p>
+            Bienvenidos a nuestro proyecto del equipo B que consume una <strong>APIs REST</strong> que fue diseñada para gestionar y visualizar información relacionada con usuarios y productos. Este proyecto ha sido desarrollado como parte de un esfuerzo colaborativo utilizando basadas en la web como <strong>HTML, CSS y Javascript </strong> 
+        </p>
+        <p>
+            El sistema hace uso de <strong>JWT</strong> (JSON Web Tokens) para la autenticación segura de los usuarios, garantizando que cada solicitud esté protegida mediante tokens encriptados. <strong>Express.js</strong>, un framework robusto para Node.js, es la base sobre la que hemos construido la API, facilitando el manejo de las rutas y las operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
+        </p>
+        <p>
+            Para la gestión de datos, hemos implementado <strong>MySQL</strong> como base de datos, asegurando la integridad y la eficiencia en el almacenamiento de información crítica. Además, el proyecto incorpora el manejo de <strong>CORS</strong> (Cross-Origin Resource Sharing) para permitir que nuestras aplicaciones front-end interactúen de manera segura con el servidor.
+        </p>
+        <p>
+            Esta plataforma está diseñada para ser altamente interactiva y fácil de usar. Utilizamos los verbos HTTP como <strong>GET, DELETE, PATCH</strong> y <strong>PUT</strong> para realizar operaciones sobre los recursos, permitiendo a los usuarios realizar acciones como consultar la lista de productos, eliminar elementos, actualizar información, y añadir nuevos registros de manera sencilla y efectiva.
+        </p>
+        <p>
+            En cuanto a la interfaz de usuario, hemos optado por un diseño limpio y moderno utilizando <strong>Bootstrap 5</strong> junto con estilos CSS personalizados. Esta combinación nos permite ofrecer una experiencia visual atractiva y responsiva, adecuada para dispositivos de diferentes tamaños, desde smartphones hasta monitores de escritorio.
+        </p>
+        <p>
+            A través de este proyecto, no solo demostramos nuestras habilidades técnicas en el desarrollo de aplicaciones web, sino que también destacamos la importancia de la seguridad y la usabilidad en la construcción de soluciones tecnológicas que pueden ser escaladas y adaptadas según las necesidades de los usuarios.
+        </p>
     </main>
+
+    <main class="container my-4" id="productos">
+        <!-- Aquí se cargarán las tarjetas de productos -->
+    </main>
+
+    <div class="container my-4">
+        <div class="row">
+            <!-- Card Backend -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./img/backend-img.jpg" class="card-img-top" alt="Backend">
+                    <div class="card-body">
+                        <h5 class="card-title">Backend</h5>
+                        <p class="card-text">
+                            Tecnologías: Express.js, JWT, MySQL, Digital Ocean.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Frontend -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./img/frontend-img.png" class="card-img-top" alt="Frontend">
+                    <div class="card-body">
+                        <h5 class="card-title">Frontend</h5>
+                        <p class="card-text">
+                            Tecnologías: HTML, CSS, JavaScript, Bootstrap 5.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card API -->
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <img src="./img/apiRest-img.jpg" class="card-img-top" alt="API">
+                    <div class="card-body">
+                        <h5 class="card-title">API</h5>
+                        <p class="card-text">
+                            Gestión de datos con API REST, implementada usando Node.js y Express. Uso de CORS y Github.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
