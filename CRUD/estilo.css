@@ -1,0 +1,14 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom right, #ff7e5f, #feb47b, #86e3ce, #009ffd); /* Fondo degradado multicolor */
+    margin: 0;
+    padding: 0;
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla */
+}
+
