@@ -1,0 +1,70 @@
+html {
+    font-family: system-ui, sans-serif;
+    font-size: 16px;
+}
+
+.card {
+    background-color: #f5f5f5;
+    border-radius: 0.5rem;
+    box-shadow: 0.2rem 0.4rem 1rem #242424;
+    max-width: 80%;
+    padding: 1rem;
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+}
+
+
+/* pseudoselector */
+.boton:hover {
+    background-color: hsl(212, 80%, 42%);
+    cursor: pointer;
+}
+
+
+.main-content{
+    float: right;
+}
+
+#title{
+    text-align: center;
+}
+
+
+ /* Estilo para los botones de navegación */
+ #prevBtn, #nextBtn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem; /* Tamaño de la flecha */
+    font-weight: bold; /* Hace que la flecha sea más visible */
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
+    padding: 0; 
+}
+/* Estilo cuando el botón está deshabilitado */
+#prevBtn:disabled, #nextBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* Estilo cuando el botón está activo */
+#prevBtn:not(:disabled):hover, #nextBtn:not(:disabled):hover {
+    background-color: #ecf5ff;
+    color: #e9e4e4;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
