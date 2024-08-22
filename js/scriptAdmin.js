@@ -59,15 +59,36 @@ function renderizarProductos(productos) {
     document.querySelector('#listaProductos').innerHTML = body;
 }
 
-function actualizarProducto(id) {
-    alert('Actualizar producto con ID: ' + id);
+    function actualizarProducto(id) {
+    window.location.href = `actualizar.html`;
 }
 
-function eliminarProducto(id) {
-    if (confirm('¿Estás seguro de que quieres eliminar este producto?')) {
-        alert('Producto con ID: ' + id + ' ha sido eliminado.');
+
+// function actualizarProducto(id) {
+//     alert('Actualizar producto con ID: ' + id);
+// }
+
+function eliminarProducto(productId) {
+    if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+        fetch(`${API_URL}/productos/${productId}`, {
+            method: 'DELETE',
+            headers: {
+                'x-access-token': token  // Usa el token de autenticación almacenado
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                alert('Producto eliminado con éxito');
+                // Aquí puedes recargar la lista de productos o eliminar el producto del DOM
+                document.getElementById(`product-${productId}`).remove(); // Remueve el producto de la lista
+            } else {
+                alert('Error al eliminar el producto');
+            }
+        })
+        .catch(error => console.error('Error al eliminar el producto:', error));
     }
 }
+
 
 const getProductos = async () => {
     const response = await fetch('http://localhost:3000/productos', {
