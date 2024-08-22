@@ -73,14 +73,14 @@ function eliminarProducto(productId) {
         fetch(`${API_URL}/productos/${productId}`, {
             method: 'DELETE',
             headers: {
-                'x-access-token': token  // Usa el token de autenticación almacenado
+                'x-access-token': token  
             }
         })
         .then(response => {
             if (response.ok) {
                 alert('Producto eliminado con éxito');
-                // Aquí puedes recargar la lista de productos o eliminar el producto del DOM
-                document.getElementById(`product-${productId}`).remove(); // Remueve el producto de la lista
+                
+                document.getElementById(`product-${productId}`).remove(); 
             } else {
                 alert('Error al eliminar el producto');
             }

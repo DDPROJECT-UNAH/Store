@@ -40,9 +40,8 @@
 
     <script>
         const API_URL = 'http://localhost:3000';
-        const token = localStorage.getItem('token');  // Obtén el token de autenticación
+        const token = localStorage.getItem('token');
 
-        // Función para cargar datos del producto en el formulario
         function loadProductData(productId) {
             fetch(`${API_URL}/productos/${productId}`, {
                 method: 'GET',
@@ -62,7 +61,6 @@
             .catch(error => console.error('Error al cargar los datos del producto:', error));
         }
 
-        // Evento de envío del formulario para actualizar el producto
         document.getElementById('productForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
@@ -94,9 +92,9 @@
             .catch(error => console.error('Error al actualizar el producto:', error));
         });
 
-        // Supón que tienes una forma de obtener el ID del producto a actualizar
-        const productIdToUpdate = 1;  // Este ID debería provenir de una selección previa
-        loadProductData(productIdToUpdate);  // Cargar los datos del producto al cargar la página
+       
+        const productIdToUpdate = 1; 
+        loadProductData(productIdToUpdate);  
     </script>
 </body>
 </html>
