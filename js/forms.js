@@ -12,7 +12,8 @@ function login() {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre_usuario: username, contrasena: password })
+        // body: JSON.stringify({ nombre_usuario: username, contrasena: password })
+        body: JSON.stringify({ Usuario: username, Contrasena: password })
     })
     .then(response => response.json())
     .then(data => {
